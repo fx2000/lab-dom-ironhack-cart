@@ -76,14 +76,14 @@ function createNewItem() {
 
   // Generate html for new product
   newHtml = 
-    `<div><span class="product-name">${productName}</span></div>
-      <div>$<span class="unit-price">${unitPrice}</span></div>
-      <div>
+    `<div class="item"><span class="product-name">${productName}</span></div>
+      <div class="item">$<span class="unit-price">${unitPrice}</span></div>
+      <div class="item">
         <label for="qty">Qty</label>
         <input type="number" name="qty" class="input quantity" value=0>
       </div>
-      <div>$<span class="total-price">0.00</span></div>
-      <div><button class="btn btn-delete">Delete</button></div>`;
+      <div class="item">$<span class="total-price">0.00</span></div>
+      <div class="item"><button class="btn btn-delete">Delete</button></div>`;
 
   // Create new div element
   let newProduct = document.createElement('div')

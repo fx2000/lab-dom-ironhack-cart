@@ -273,31 +273,37 @@ input {
   width: 50px;
 }
 
+main > h1 {
+  text-align: center;
+}
+
 .cart {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .product {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  width: 60%;
   padding-bottom: 10px;
+}
+
+.item {
+  flex: 1;
+}
+
+.controls {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .new-product {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 60%;
-  padding-bottom: 10px;
+  justify-content: center;
 }
 
-.controls {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.new-product > div {
+  padding: 20px;
 }
