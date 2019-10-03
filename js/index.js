@@ -1,12 +1,6 @@
 function deleteItem(event) {
 
-  // TODO: Make sure deleted items don't take up space in the flex-box
-
-  // Select the product's parent node
-  let product = event.currentTarget.parentNode.parentNode;
-
-  // Clear its contents
-  product.innerHTML = "";
+  event.target.parentElement.parentElement.remove();
 }
 
 function getPriceByProduct(itemNode) {
@@ -97,9 +91,10 @@ function createNewItem() {
 
   // Insert html code into new div
   newProduct.innerHTML = newHtml;
+  update();
 }
 
-window.onload = function() {
+function update() {
   var calculatePriceButton = document.getElementById('calc-prices-button');
   var createItemButton = document.getElementById('new-item-create');
   var deleteButtons = document.getElementsByClassName('btn-delete');
@@ -107,7 +102,11 @@ window.onload = function() {
   calculatePriceButton.onclick = getTotalPrice;
   createItemButton.onclick = createNewItem;
 
-  for (var i = 0; i<deleteButtons.length ; i++) {
+  for (var i = 0; i < deleteButtons.length; i++) {
     deleteButtons[i].onclick = deleteItem;
   }
+}
+
+window.onload = function() {
+  this.update();
 };
